@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+    crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="tex/css" href="Hakkında.html">
+    <link rel="stylesheet" type="tex/css" href="şehrim.html">
+    <link rel="stylesheet" type="tex/css" href="ilgi alanlarım.html">
+    <link rel="stylesheet" type="tex/css" href="takımım.html">
+    <link rel="stylesheet" type="tex/css" href="iletişim.html">
+    <link rel="stylesheet" type="tex/css" href="login.html">
+    <link rel="stylesheet" type="tex/css" href="özgeçmişim.html">
+
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" class="navbar navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" 
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+          <a class="navbar-brand" >EMİRHAN USTA</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="Hakkında.html" >Hakkında <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="özgeçmişim.html">Özgeçmişim</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="şehrim.html">Şehrim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="takımım.html">Takımım</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ilgi alanlarım.html">İlgi Alanlarım</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="iletişim.html">İletişim</a>
+            </li>                 
+          </ul>
+          <a href="login.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Login</a> 
+         </div>
+    </nav> 
+
+    <form id="login">
+      <h1 style="text-align: center;">Login</h1>
+      <br>
+      <p><b>Kullanıcı Adı</b>
+        <input id="id" class="form-control px-3 py-3" type="email" required placeholder="kullanıcı adınızı giriniz" >
+      </p>
+      <br>
+      <p><b>Şifre</b>
+        <input id="sifre"  class="form-control px-3 py-3" type="password" required placeholder="şifrenizi giriniz">
+      </p>
+      <br>
+      <p style="text-align: center;">     
+         <button  type="submit" onclick="a()" class="btn btn-dark">Giriş</button> 
+      </p>
+    </form>
+
+    <script type="text/javascript">
+      function a()
+      {
+        var kullanıcı_adı="b201210023@gmail.com";
+        var kullanıcı_sifre="123";
+        var alınan_kullanıcı_adı = document.getElementById("id").value;
+        var alınan_sifre = document.getElementById("sifre").value;
+        if(kullanıcı_adı==alınan_kullanıcı_adı&&kullanıcı_sifre==alınan_sifre)
+        {
+          alert("Hoşgeldin b201210023@gmail.com");
+          window.location = "Hakkında.html";
+        }
+        else
+        {
+          alert("Girilen Bilgiler Hatalıdır.");
+        }
+      }
+    </script>
+
+</body>
+</html>

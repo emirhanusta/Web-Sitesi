@@ -1,0 +1,12 @@
+#login{
+    margin: auto;
+    margin-top: 50px;
+    padding: 35px;
+    border: 1px solid gray;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 50%;
+
+}
