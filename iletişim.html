@@ -10,13 +10,14 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
     crossorigin="anonymous">
 
-    <link rel="stylesheet" type="tex/css" href="Hakkında.html">
+    <link rel="stylesheet" type="tex/css" href="index.html">
     <link rel="stylesheet" type="tex/css" href="şehrim.html">
     <link rel="stylesheet" type="tex/css" href="ilgi alanlarım.html">
     <link rel="stylesheet" type="tex/css" href="takımım.html">
     <link rel="stylesheet" type="tex/css" href="iletişim.html">
     <link rel="stylesheet" type="tex/css" href="login.html">
     <link rel="stylesheet" type="tex/css" href="özgeçmişim.html">
+    <link rel="stylesheet" href="styl.css">
 
 
 </head>
@@ -30,8 +31,8 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
           <a class="navbar-brand" >EMİRHAN USTA</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="Hakkında.html" >Hakkında <span class="sr-only">(current)</span></a>
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html" >Hakkında </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="özgeçmişim.html">Özgeçmişim</a>
@@ -52,8 +53,86 @@
           <a href="login.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Login</a> 
          </div>
     </nav> 
-    <p>iletişim</p>
-         
+    <h1 class="text-muted mt-3"><center>İLETİŞİM</center></h1>
+    <section class="site-section bg-light" id="iletisim">
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <div class="section-heading text-center">
+            </div>
+          </div>
+          <div class="col-md-2 mb-5 mb-md-0">
+          </div>
+          <div class="col-md-8 mb-5 mb-md-0">
+            <form id="form" action="Send.php" method="POST" name="form">
+              <div class="form-group">
+                <input type="text" id="isim" name="isim" class="form-control px-3 py-3" placeholder="İsminiz">
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-control px-3 py-3" placeholder="Mail Adresiniz">
+              </div>
+              <div class="form-group">
+                <input type="text" id="telefon" name="telefon" onkeypress="Sayi(event)" class="form-control px-3 py-3" placeholder="Telefon Numaranız">
+              </div>
+              <div class="form-group">
+                <textarea id="mesaj" name="mesaj" class="form-control px-3 py-2" placeholder="Mesajınızı buraya yazın"></textarea>
+              </div>
+              <div class="form-group">
+                  <span>Ulaşma Sebebi : </span>
+                  <input type="radio" name="isveyakisisel" id="isamaci"><span style="color:black;"> İş </span>
+                  <input type="radio" name="isveyakisisel" id="kisiselamaci" style="margin-left : 5px;"><span style="color:black;"> Kişisel </span>
+              </div>
+              <div class="form-group">
+                  <span>Geri dönüş yolu seçiniz : </span>
+                  <select name="ulasim">
+                    <option value="telefonla">Telefon ile</option>
+                    <option value="maille">Mail ile</option>
+                    <option value="SMSle">SMS ile</option>
+                  </select> 
+              </div>
+              <div class="form-group mb-2">
+                  <input type="checkbox" name="onaykutusu" id="onaykutusu">
+                  <span>Kullanım koşullarını onaylıyorum.</span>
+              </div>
+              <div class="row col-md-7 mb-5 mb-md-0">
+                <div class="form-group">
+                  <input type="button" class="btn btn-primary  px-4 py-3" onclick="temizle()" value="Temizle">
+                </div>
+                <div style="color:white">-</div>
+                <div class="form-group">
+                  <input type="submit" onclick="kontrol()" class="btn btn-primary  px-4 py-3" value="Mesaj Gönder">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-2 mb-5 mb-md-0">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function kontrol()
+      {
+        var isim = document.getElementById("isim").value;
+        var soyad = document.getElementById("email").value;
+        var doğum=document.getElementById("telefon").value;
+        var email = document.getElementById("mesaj").value;
+        var mesaj=document.getElementById("ulasim").value;
+        var mesaj=document.getElementById("onaykutusu").value;
+
+        var sayac = 0;
+        if (isim == null || isim == "" || soyad == null || soyad == "" ||doğum==null || doğum =="" ||email == null || email == "" || mesaj ==null || mesaj=="" )
+        {
+          alert("Bütün Alanları Doldurmak Zorunludur.!");
+          return false;
+        }          
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 </body>
 </html>

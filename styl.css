@@ -1,12 +1,38 @@
+* {
+    box-sizing: border-box;
+}
 #login{
     margin: auto;
-    margin-top: 50px;
-    padding: 35px;
+    margin-top: 4%;
+    padding: 4%;
     border: 1px solid gray;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
     width: 50%;
-
+    border-radius: 5%;
 }
+nav a:hover{
+    color: white;
+    font-weight:bold;    
+}
+nav a:visited{
+    color: white;
+    font-weight:bold;    
+}
+#takımım a:hover,#yemekler a:hover{
+    background-color: red;
+    color: white;
+}
+#takımım a,#yemekler a{
+    color: red;
+}
+#yemekler h6{
+    background-color: red;
+}
+@media screen and (max-width:992px)
+        {
+            #login{
+                width: 80%;              
+            }
+            #sehrim_card{
+                width: 80%;
+            }
+        }

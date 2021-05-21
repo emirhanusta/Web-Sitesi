@@ -10,13 +10,14 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
     crossorigin="anonymous">
 
-    <link rel="stylesheet" type="tex/css" href="Hakkında.html">
+    <link rel="stylesheet" type="tex/css" href="index.html">
     <link rel="stylesheet" type="tex/css" href="şehrim.html">
     <link rel="stylesheet" type="tex/css" href="ilgi alanlarım.html">
     <link rel="stylesheet" type="tex/css" href="takımım.html">
     <link rel="stylesheet" type="tex/css" href="iletişim.html">
     <link rel="stylesheet" type="tex/css" href="login.html">
     <link rel="stylesheet" type="tex/css" href="özgeçmişim.html">
+    <link rel="stylesheet" href="styl.css">
 
 
 </head>
@@ -30,8 +31,8 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
           <a class="navbar-brand" >EMİRHAN USTA</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="Hakkında.html" >Hakkında <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" >Hakkında </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="özgeçmişim.html">Özgeçmişim</a>
@@ -52,7 +53,101 @@
           <a href="login.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Login</a> 
          </div>
     </nav> 
-    <p>şehrim</p>
 
-</body>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-9">
+          <div class="card mb-4">
+            <img class="card-img-top img-thumbnail" src="img/Samsun.png">
+            <div class="card-body">
+              <h2 class="card-title"><center>Samsun</center></h2>
+              <hr>          
+              <p class="card-text">Karadeniz Bölgesi'ndeki Orta Karadeniz Bölümü'nde bulunan Samsun 1.356.079 kişilik nüfusuyla bölgenin en yüksek, Türkiye'nin ise on altıncı en yüksek nüfuslu ilidir. Karadeniz Bölgesi'nin eğitim, sağlık, sanayi, ticaret, ulaşım ve ekonomi açılarından en gelişmiş şehri olan Samsun kalkınmada birinci derecede öncelikli yörelerden biridir.</p>                    
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="card-title"><center>Gezilecek Yerler</center></h2>
+              <hr>
+              <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="onur anıtı.html" target="_blank">
+                      <img src="img/Onur_Anıtı.png" class="d-block w-100 img-fluid"></a>
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Onur Anıtı</h5>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                     <a href="amisos tepesi.html" target="_blank"><img src="img/Amisos_Tepesi.jpg" class="d-block w-100 img-fluid"></a> 
+                     <div class="carousel-caption d-none d-md-block">
+                      <h5>Amisos Tepesi</h5>                   
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="gazi müzesi.html" target="_blank"> <img src="img/Gazi_Müzesi.jpg" class="d-block w-100 img-fluid"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Gazi Müzesi</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                   <a href="bandırma vapuru.html" target="_blank"><img src="img/Bandırma_Vapuru.png" class="d-block w-100" ></a> 
+                   <div class="carousel-caption d-none d-md-block">
+                    <h5><strong>Bandırma Vapuru</strong></h5>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>     
+      <div class="col-md-3" id="yemekler">
+        <div class="card my-4">
+          <h6 class="card-header  text-white" >Meşhur Yemekler</h6>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.google.com/search?q=Bafra+Pidesi&sxsrf=ALeKk03AIuXQjpk20QwZRZ1MefcWNMsBgg:1620554130467&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiOkaTKqrzwAhVpk4sKHTu_DNQQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Bafra Pidesi</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=Kaz+Pilav%C4%B1&sxsrf=ALeKk02WHjc2QCsjHnkdOGkf5LQLMyHjOA:1620554999565&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjOy9norbzwAhVpMewKHdD9D9cQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Kaz Pilavı</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=K%C4%B1vratma.&sxsrf=ALeKk02rYi3s7KjNjFbBHHegDTiSlzDpfw:1620555191126&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi934XErrzwAhWONOwKHTCeBEsQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5" target="_blank"><i class="fa fa-home" aria-hidden="true" ></i> Kıvratma</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=Halu%C3%A7ka&sxsrf=ALeKk01vd6YTsjKQ1F4_7IYts8puBLc8vA:1620555272634&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiMnfTqrrzwAhVqiIsKHQM0D9oQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Haluçka</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=Ka%C4%9F%C4%B1tta+Hamsi&sxsrf=ALeKk02vdfRRqbrYgAaVq1ebRo-xAIvCzw:1620555370635&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiJ8NGZr7zwAhVjhosKHU4DCWYQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5" target="_blank"><i class="fa fa-home" aria-hidden="true"></i> Kağıtta Hamsi</a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=M%C4%B1s%C4%B1rl%C4%B1+Fasulye+%C3%87orbas%C4%B1&sxsrf=ALeKk03qnQ_-0fRN6xUvy34cIvZP3XPY9g:1620555422179&source=lnms&tbm=isch&sa=X&ved=2ahUKEwibhJyyr7zwAhXT_ioKHeHHDNEQ_AUoAXoECAEQAw&biw=1280&bih=578&dpr=1.5"><i class="fa fa-home" aria-hidden="true"></i> Mısırlı Fasulye Çorbası</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+  </body>
 </html>
