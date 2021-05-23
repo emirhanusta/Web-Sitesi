@@ -58,15 +58,15 @@
 
 
     <div class="container text-muted">
-      <form id="login">
+      <form id="login" action="login.php" method="POST" id="login" novalidate="" name="login">
         <h1 style="text-align: center;">Login</h1>
         <br>
         <p><b>Kullanıcı Adı</b>
-          <input id="id" class="form-control px-3 py-3 shadow" type="email" required placeholder="kullanıcı adınızı giriniz" >
+          <input id="id" name="id" class="form-control px-3 py-3 shadow" type="email" required placeholder="kullanıcı adınızı giriniz" >
         </p>
         <br>
         <p><b>Şifre</b>
-          <input id="sifre"  class="form-control px-3 py-3 shadow" type="password" required placeholder="şifrenizi giriniz">
+          <input id="sifre" name="sifre" class="form-control px-3 py-3 shadow" type="password" required placeholder="şifrenizi giriniz">
         </p>
         <br>
         <p style="text-align: center;">     
@@ -79,18 +79,11 @@
     <script type="text/javascript">
       function a()
       {
-        var kullanıcı_adı="b201210023@gmail.com";
-        var kullanıcı_sifre="123";
-        var alınan_kullanıcı_adı = document.getElementById("id").value;
-        var alınan_sifre = document.getElementById("sifre").value;
-        if(kullanıcı_adı==alınan_kullanıcı_adı&&kullanıcı_sifre==alınan_sifre)
+        var kullanici_adi = document.getElementById("id").value;
+        var sifre = document.getElementById("sifre").value;
+        if(sifre==null||sifre==""||kullanici_adi==null||kullanici_adi=="")
         {
-          alert("Hoşgeldin b201210023@gmail.com");
-          window.location = "Hakkında.html";
-        }
-        else
-        {
-          alert("Girilen Bilgiler Hatalıdır.");
+          alert("Bütün Alanları Doldurmak Zorunludur.!");
         }
       }
     </script>

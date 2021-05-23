@@ -27,6 +27,15 @@ nav a:visited{
 #yemekler h6{
     background-color: red;
 }
+#mesaj{
+    width: 100%;
+}
+#player{
+    max-width: 80%;
+}
+#whiplash{
+    max-width: 80%;
+}
 @media screen and (max-width:992px)
         {
             #login{

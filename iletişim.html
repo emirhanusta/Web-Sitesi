@@ -53,61 +53,89 @@
           <a href="login.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Login</a> 
          </div>
     </nav> 
-    <h1 class="text-muted mt-3"><center>İLETİŞİM</center></h1>
-    <section class="site-section bg-light" id="iletisim">
+
+    <section class="site-section bg-light">
       <div class="container mb-5">
         <div class="row">
           <div class="col-md-12 mb-5">
             <div class="section-heading text-center">
+              <h1 class="text-muted mt-3"><center>İLETİŞİM</center></h1>
+              <form action="iletişim.php" method="POST" id="form" novalidate="" name="form">
+                <div class="form-group">      
+                  <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                      <input id="ad" class="form-control" type="text" placeholder="Adınız..." name="ad">    
+                    </div>
+                  </div>  
+                </div>
+                <div class="form-group">      
+                  <div class="row mt-3">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                      <input id="soyad" class="form-control" placeholder="Soyadınız..." type="text" name="soyad">    
+                    </div>
+                  </div>  
+                </div>
+                <div class="form-group">      
+                  <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                      <input class="form-control" type="text" placeholder="Doğum Tarihiniz..." name="doğum" id="doğum">    
+                    </div>
+                  </div>  
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                      <select  class="form-control" name="eğitim" id="eğitim">          
+                        <option>İlkokul</option>
+                        <option>Ortaokul</option>
+                        <option>Lise</option>
+                        <option>Üniversite</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">      
+                  <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5 mx-1">
+                      <input id="email" class="form-control" placeholder="Email Adresiniz..." type="text" name="email">    
+                    </div>
+                  </div>  
+                </div>
+          
+                <div class="form-group">      
+                  <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5">
+                      <textarea id="mesaj" name="mesaj" placeholder="Mesajınız.." ></textarea>   
+                    </div>
+                  </div>  
+                </div>
+
+                <div class="form-group">      
+                  <div class="row mt-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-5 mx-2">
+                      <input class="mx-1" id="cns" type="radio" name="cns" value="Erkek"><strong>Erkek</strong>
+                      <input class="mx-1" id="cns" type="radio" name="cns" value="Kadın"><strong>Kadın </strong>  
+                    </div>
+                  </div>  
+                </div>
+
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <button class="btn btn-dark" onclick="kontrol()" type="submit">Gönder</button> 
+                  <div class="mx-2"></div>
+                  <button class="btn btn-dark" type="reset">Temizle</button>      
+                </div>
+              </form>
+  
             </div>
           </div>
-          <div class="col-md-2 mb-5 mb-md-0">
-          </div>
-          <div class="col-md-8 mb-5 mb-md-0">
-            <form id="form" action="Send.php" method="POST" name="form">
-              <div class="form-group">
-                <input type="text" id="isim" name="isim" class="form-control px-3 py-3" placeholder="İsminiz">
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" class="form-control px-3 py-3" placeholder="Mail Adresiniz">
-              </div>
-              <div class="form-group">
-                <input type="text" id="telefon" name="telefon" onkeypress="Sayi(event)" class="form-control px-3 py-3" placeholder="Telefon Numaranız">
-              </div>
-              <div class="form-group">
-                <textarea id="mesaj" name="mesaj" class="form-control px-3 py-2" placeholder="Mesajınızı buraya yazın"></textarea>
-              </div>
-              <div class="form-group">
-                  <span>Ulaşma Sebebi : </span>
-                  <input type="radio" name="isveyakisisel" id="isamaci"><span style="color:black;"> İş </span>
-                  <input type="radio" name="isveyakisisel" id="kisiselamaci" style="margin-left : 5px;"><span style="color:black;"> Kişisel </span>
-              </div>
-              <div class="form-group">
-                  <span>Geri dönüş yolu seçiniz : </span>
-                  <select name="ulasim">
-                    <option value="telefonla">Telefon ile</option>
-                    <option value="maille">Mail ile</option>
-                    <option value="SMSle">SMS ile</option>
-                  </select> 
-              </div>
-              <div class="form-group mb-2">
-                  <input type="checkbox" name="onaykutusu" id="onaykutusu">
-                  <span>Kullanım koşullarını onaylıyorum.</span>
-              </div>
-              <div class="row col-md-7 mb-5 mb-md-0">
-                <div class="form-group">
-                  <input type="button" class="btn btn-primary  px-4 py-3" onclick="temizle()" value="Temizle">
-                </div>
-                <div style="color:white">-</div>
-                <div class="form-group">
-                  <input type="submit" onclick="kontrol()" class="btn btn-primary  px-4 py-3" value="Mesaj Gönder">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-md-2 mb-5 mb-md-0">
-          </div>
-
         </div>
       </div>
     </section>
@@ -115,12 +143,12 @@
     <script>
       function kontrol()
       {
-        var isim = document.getElementById("isim").value;
-        var soyad = document.getElementById("email").value;
-        var doğum=document.getElementById("telefon").value;
-        var email = document.getElementById("mesaj").value;
-        var mesaj=document.getElementById("ulasim").value;
-        var mesaj=document.getElementById("onaykutusu").value;
+        var isim = document.getElementById("ad").value;
+        var soyad = document.getElementById("soyad").value;
+        var doğum=document.getElementById("doğum").value;
+        var email = document.getElementById("eğitim").value;
+        var mesaj=document.getElementById("email").value;
+        var mesaj=document.getElementById("mesaj").value;
 
         var sayac = 0;
         if (isim == null || isim == "" || soyad == null || soyad == "" ||doğum==null || doğum =="" ||email == null || email == "" || mesaj ==null || mesaj=="" )
